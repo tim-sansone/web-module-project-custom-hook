@@ -3,8 +3,10 @@ import React from 'react';
 const Navbar = (props) => {
   const toggleMode = e => {
     e.preventDefault();
+    console.log(props.darkMode);
     props.setDarkMode(!props.darkMode);
   };
+
 
   return (
     <nav className="navbar">

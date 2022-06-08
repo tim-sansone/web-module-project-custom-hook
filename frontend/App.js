@@ -6,9 +6,14 @@ import Navbar from "./components/Navbar";
 import useDarkMode from "./hooks/useDarkMode";
 
 const App = () => {
-  const [coinData, setCoinData] = useState([]);
+  console.log(window.localStorage);
   
-  const [darkMode, setDarkMode] = useDarkMode(false);
+  const [coinData, setCoinData] = useState([]);
+  const [darkMode, setDarkMode] = useDarkMode("darkMode", false);
+  console.log(darkMode);
+  // window.localStorage.clear();
+  
+  
 
   useEffect(() => {
     axios
